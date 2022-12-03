@@ -78,7 +78,7 @@ async def get_weather(message: types.Message):
               f"Влажность: {humidity}%  Давление: {pressure} мм.рт.ст  Ветер: {wind} м/с\n\n"
               f"_{soros[0]}_", parse_mode="Markdown" 
               )
-            time.sleep(30)
+            time.sleep(10)
             
         except:
             await message.reply("\U00002620 Проверьте название города \U00002620")
