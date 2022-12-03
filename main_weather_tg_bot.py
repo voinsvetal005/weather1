@@ -1,9 +1,24 @@
 import requests
 import datetime
+import schedule, time
 from config import tg_bot_token, open_weather_token
 from aiogram import Bot, types
 from aiogram.dispatcher import Dispatcher
 from aiogram.utils import executor
+
+
+def send_messange():
+    # ваша функция отправки сообщений
+    print("Отправка завершена!")
+
+
+schedule.every().day.at("12:22").do(send_messange)
+
+while True: # этот цикл отсчитывает время. Он обязателен.
+    schedule.run_pending()
+    time.sleep(1)
+
+
 channel_id = '-1001830691651' #Пробабота
 #channel_id = '-1001623252716' #Заповедные
 
